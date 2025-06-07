@@ -12,7 +12,7 @@ public class Alerta {
     @Column(name = "id_alerta")
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_tipo_alerta", nullable = false)
     private TipoAlerta tipoAlerta;
 
