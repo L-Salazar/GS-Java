@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UsuarioService {
@@ -43,5 +44,20 @@ public class UsuarioService {
             throw new ResourceNotFoundException("Usuário com ID " + id + " não encontrado para exclusão.");
         }
         repository.deleteById(id);
+    }
+
+    public Usuario verificarCredenciais(String email, String senha) throws Exception {
+        Optional<Usuario> usuarioOptional = repository.findByEmail(email);
+        if (usuarioOptional.isEmpty()) {
+            throw new Exception("Usuário não encontrado");
+        }
+
+        Usuario usuario = usuarioOptional.get();
+
+        if (!usuario.getSenha().equals(senha)) {
+            throw new Exception("Senha incorreta");
+        }
+
+        return usuario;
     }
 }

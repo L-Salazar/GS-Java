@@ -12,11 +12,11 @@ public class Ocorrencia {
     @Column(name = "id_ocorrencia")
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_usuario", nullable = false)
     private Usuario usuario;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_localizacao", nullable = false)
     private Localizacao localizacao;
 

@@ -19,6 +19,10 @@ public class OcorrenciaService {
     }
 
     public List<Ocorrencia> listarTodos() {
+        final List<Ocorrencia> ocorrencias = repository.findAll();
+        System.out.println("Listando ocorrências: " + ocorrencias.size() + " registros encontrados.");
+        System.out.println("Detalhes das ocorrências:" + ocorrencias.get(0).getLocalizacao().getLatitude());
+        System.out.println("Detalhes das ocorrências:" + ocorrencias.get(0).getLocalizacao().getLongitude());
         return repository.findAll();
     }
 

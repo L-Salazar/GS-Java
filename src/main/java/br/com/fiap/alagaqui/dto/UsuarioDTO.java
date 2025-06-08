@@ -7,17 +7,13 @@ public class UsuarioDTO {
     private Long id;
     private String nome;
     private String email;
-    private String senha;
-    private LocalDateTime dataUltimaCriacaoRelato;
 
     public UsuarioDTO() {}
 
-    public UsuarioDTO(Long id, String nome, String email, String senha, LocalDateTime dataUltimaCriacaoRelato) {
+    public UsuarioDTO(Long id, String nome, String email) {
         this.id = id;
         this.nome = nome;
         this.email = email;
-        this.senha = senha;
-        this.dataUltimaCriacaoRelato = dataUltimaCriacaoRelato;
     }
 
     public Long getId() {
@@ -42,21 +38,5 @@ public class UsuarioDTO {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
-
-    public LocalDateTime getDataUltimaCriacaoRelato() {
-        return dataUltimaCriacaoRelato;
-    }
-
-    public void setDataUltimaCriacaoRelato(LocalDateTime dataUltimaCriacaoRelato) {
-        this.dataUltimaCriacaoRelato = dataUltimaCriacaoRelato;
     }
 }

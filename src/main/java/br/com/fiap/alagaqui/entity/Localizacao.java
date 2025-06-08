@@ -1,7 +1,9 @@
 package br.com.fiap.alagaqui.entity;
 
+import br.com.fiap.alagaqui.config.CustomDoubleSerializer;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
 import jakarta.persistence.*;
-import java.math.BigDecimal;
 
 @Entity
 @Table(name = "tb_alagaqui_localizacoes")
@@ -15,20 +17,15 @@ public class Localizacao {
     @Column(name = "nome_localizacao", nullable = false, length = 150)
     private String nome;
 
+    @JsonSerialize(using = CustomDoubleSerializer.class)
     @Column(name = "latitude", nullable = false)
-    private BigDecimal latitude;
+    private Double latitude;
 
+    @JsonSerialize(using = CustomDoubleSerializer.class)
     @Column(name = "longitude", nullable = false)
-    private BigDecimal longitude;
+    private Double longitude;
 
-    public Localizacao() {}
-
-    public Localizacao(String nome, BigDecimal latitude, BigDecimal longitude) {
-        this.nome = nome;
-        this.latitude = latitude;
-        this.longitude = longitude;
-    }
-
+    // Getters e Setters
     public Long getId() {
         return id;
     }
@@ -45,19 +42,19 @@ public class Localizacao {
         this.nome = nome;
     }
 
-    public BigDecimal getLatitude() {
+    public Double getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(BigDecimal latitude) {
+    public void setLatitude(Double latitude) {
         this.latitude = latitude;
     }
 
-    public BigDecimal getLongitude() {
+    public Double getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(BigDecimal longitude) {
+    public void setLongitude(Double longitude) {
         this.longitude = longitude;
     }
 }
