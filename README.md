@@ -11,7 +11,7 @@ Guilherme Felipe da Silva Souza: RM558282
 
 ## Descrição
 
-**Alagaqui** é uma plataforma colaborativa de monitoramento e mapeamento de inundações em tempo real, desenvolvida para ajudar na prevenção de desastres naturais relacionados a alagamentos em áreas urbanas. A plataforma coleta dados de sensores IoT, como nível de água, taxa de fluxo e obstruções em bueiros, e permite que a comunidade registre e visualize pontos de alagamento em tempo real. A API será usada no aplicativo para cadastrar localizações no mapa pode ocorrer inundações.
+**Alagaqui** é uma plataforma colaborativa de monitoramento e mapeamento de inundações em tempo real, desenvolvida para ajudar na prevenção de desastres naturais relacionados a alagamentos em áreas urbanas. A plataforma coleta dados de sensores IoT, como nível de água, taxa de fluxo e obstruções em bueiros, e permite que a comunidade registre e visualize pontos de alagamento em tempo real. A API será usada no aplicativo para cadastrar localizações no mapa pode ocorrer inundações. O app conta também com a função de "Alertas" que podem ser emitidos por prefeituras que queiram fazer parceria com o app.
 
 ## Tecnologias Utilizadas
 
